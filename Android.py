@@ -4,16 +4,18 @@
 
 from appium import webdriver
 from time import sleep
-caps = {}
-caps["platformName"] = "Android"
-caps["platformVersion"] = "10.0.0"
-caps["deviceName"] = "RF8N613SNHB"
-caps["appPackage"] = "com.sinoiov.driver"
-caps["appActivity"] = ".InitActivity"
-caps["noReset"] = True
 
-driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 
-sleep(5)
 
-driver.quit()
+def android_automatic():
+    caps = {"platformName": "Android", "platformVersion": "11.0.0", "deviceName": "RF8N613SNHB",
+            "appPackage": "com.sinoiov.driver", "appActivity": ".InitActivity", "noReset": True}
+
+    driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
+
+    sleep(2)
+    driver.quit()
+
+
+if __name__ == '__main__':
+    android_automatic()

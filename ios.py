@@ -4,20 +4,15 @@
 
 from appium import webdriver
 from time import sleep
-caps = {}
-caps["platformName"] = "ios"
-caps["platformVersion"] = "14.0.1"
-caps["deviceName"] = "hjg"
-caps["udid"] = "8287a0aa673816364493bf1f853f4e6658276398"
-caps["app"] = "com.sinoiov.driver"
-caps["automationName"] = "XCUITest"
-caps["xcodeOrgId"] = "3LMYQAV6FL"
-caps["xcodeSigningId"] = "iPhone Developer"
-caps["wdaLocalPort"] = "8100"
-caps["noReset"] = True
+def ios_automatic():
+    caps = {"platformName": "ios", "platformVersion": "14.0.1", "deviceName": "hjg",
+            "udid": "8287a0aa673816364493bf1f853f4e6658276398", "app": "com.sinoiov.driver", "automationName": "XCUITest",
+            "xcodeOrgId": "3LMYQAV6FL", "xcodeSigningId": "iPhone Developer", "wdaLocalPort": "8100", "noReset": True}
 
-driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-sleep(5)
+    driver = webdriver.Remote("http://localhost:4725/wd/hub", caps)
+    sleep(5)
+    driver.quit()
+if __name__ == '__main__':
 
+ ios_automatic()
 
-driver.quit()
