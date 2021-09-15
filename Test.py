@@ -1,6 +1,6 @@
 from selenium.webdriver.chrome.options import Options
 from appium import webdriver
-import time
+
 import time
 from selenium import webdriver
 from PIL import Image
