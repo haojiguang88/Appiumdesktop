@@ -7,7 +7,7 @@ import pytest
 import os
 
 
-def test_steps_demo(test_data1):
+def test_steps_demo():
     # 进行设备链接
     d = u2.connect_usb('RF8N613SNHB')
     d.sleep(5)
@@ -19,6 +19,3 @@ def test_steps_demo(test_data1):
     assert True
 
 
-if __name__ == '__main__':
-    pytest.main(['--alluredir', '../reports/result'])
-    os.system('allure generate ../reports/result -o ../reports/report --clean')
