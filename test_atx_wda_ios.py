@@ -22,4 +22,4 @@ def test_steps_demo():
 
 if __name__ == '__main__':
     pytest.main(['--alluredir', './reports/result'])
-    os.system('allure generate ./reports/result -o ./reports/report --clean')
+    #os.system('allure generate ./reports/result -o ./reports/report --clean')
