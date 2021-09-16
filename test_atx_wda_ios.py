@@ -8,7 +8,7 @@ import os
 # 做ios自动化直接用wda也行,用这个atx也行,appium太重了!
 # 需要执行8100端口转发与wda启动两个命令
 
-def test_steps_demo(test_data1):
+def test_steps_demo():
     # 连接
     d = atx.connect('http://localhost:8100', platform='ios')
     # 打开车旺大卡
