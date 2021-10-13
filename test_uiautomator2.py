@@ -17,5 +17,3 @@ def test_steps_demo():
     d.sleep(5)
     d.app_stop('com.sinoiov.driver')
     assert True
-
-
